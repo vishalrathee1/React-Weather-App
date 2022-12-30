@@ -6,11 +6,11 @@ import { useState } from 'react';
 
 const App =() => {
 
-  // const [weatherData, setweatherData] = useState({})
+  const [weatherData, setweatherData] = useState({})
   
   const pull_data = (data) =>{
     console.log(data)
-    // setweatherData(data);
+    setweatherData(data);
   }
 
   return (
@@ -19,7 +19,7 @@ const App =() => {
       "display" : "flex"
     }}>
       <SearchCity func = {pull_data}/>
-      <DisplayWeather />
+      <DisplayWeather weatherData = {weatherData}/>
     </div>
   )
 }
